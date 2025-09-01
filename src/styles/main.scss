@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat($column-count, $card-size);
+    justify-content: center;
+    gap: 48px 46px;
+    padding: 50px 40px;
+
+    @media (min-width: 488px) {
+      & {
+        $column-count: 2;
+
+        grid-template-columns: repeat($column-count, $card-size);
+      }
+    }
+
+    @media (min-width: 768px) {
+      & {
+        $column-count: 3;
+
+        grid-template-columns: repeat($column-count, $card-size);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      & {
+        $column-count: 4;
+
+        grid-template-columns: repeat($column-count, $card-size);
+      }
+    }
+  }
+}
